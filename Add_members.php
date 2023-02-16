@@ -1,8 +1,8 @@
 <?php
 session_start();
-if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
   header("Location: Login.php");
-  exit; 
+  exit;
 }
 include("connection.php");
 $showAlert = false;
@@ -66,6 +66,9 @@ if (isset($_POST["submit"])) {
           <li class="nav-item">
             <a class="nav-link" href="./Attendance_history.php">Attendance History</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Credits.php">Credits</a>
+          </li>
         </ul>
         <span class="navbar-text d-flex">
           <a href="./Add_attendance.php"><button class="btn btn-success">Add Attendance</button></a>
@@ -83,7 +86,8 @@ if (isset($_POST["submit"])) {
       Member added sucessfully!
     </div>
     ';
-  }if ($alreadyExist){
+  }
+  if ($alreadyExist) {
     echo '
     <div class="alert alert-danger" role="alert">
       A Member with same email already exists!
@@ -173,10 +177,11 @@ if (isset($_POST["submit"])) {
     </div>
     <div class="row text-center text-white">
       <div class="col-lg-12">
-        <p>© 2023 ACM Amritapuri All Rights Reserved. Developed by Akhil, Vani, Neeraja & Sudhin</p>
+        <p>© 2023 ACM Amritapuri All Rights Reserved. Made in ❤️ with India.</p>
       </div>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
+
 </html>

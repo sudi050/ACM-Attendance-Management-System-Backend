@@ -42,6 +42,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
           <li class="nav-item">
             <a class="nav-link" href="./Attendance_history.php">Attendance History</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Credits.php">Credits</a>
+          </li>
         </ul>
         <span class="navbar-text d-flex">
           <a href="./Add_attendance.php"><button class="btn btn-success">Add Attendance</button></a>
@@ -127,7 +130,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
     </div>
     <div class="row text-center text-white">
       <div class="col-lg-12">
-        <p>© 2023 ACM Amritapuri All Rights Reserved. Developed by Akhil, Vani, Neeraja & Sudhin</p>
+        <p>© 2023 ACM Amritapuri All Rights Reserved. Made in ❤️ with India.</p>
       </div>
     </div>
   </div>
