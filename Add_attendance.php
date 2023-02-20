@@ -47,6 +47,7 @@ if (isset($_POST["submit"])) {
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
   <script src="js/export.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
 </head>
 
 <body>
@@ -77,9 +78,9 @@ if (isset($_POST["submit"])) {
         </ul>
         <span class="navbar-text d-flex">
           <a href="./Add_attendance.php"><button class="btn btn-success">Add Attendance</button></a>
-          <button class="btn btn-danger d-flex ms-3">
-            <span onclick="location.href='./Logout.php'" class="material-symbols-outlined"> logout </span>Logout
-          </button>
+          <button onclick="location.href='./Logout.php'" class="btn btn-danger d-flex ms-3"><span class="material-symbols-outlined">
+              logout
+            </span>Logout</button>
         </span>
       </div>
     </div>
@@ -108,7 +109,7 @@ if (isset($_POST["submit"])) {
               <button name="submit" class="btn btn-success">Mark Attendance</button>
             </div>
             <div>
-              <button onclick="exportTableToExcel('tblData', 'attendance-data')" class="btn btn-success">Export</button>
+              <button onclick="htmlTableToExcel('xlsx')" class="btn btn-success">Export</button>
             </div>
           </div>
         </form>
@@ -121,25 +122,32 @@ if (isset($_POST["submit"])) {
             <thead>
               <tr>
                 <th>
-                  <input type="text" class="search-input" placeholder="Full Name" />
+                  <label>Full Name</label>
+                  <input type="text" class="search-input" />
                 </th>
                 <th>
-                  <input type="text" class="search-input" placeholder="Amrita ID" />
+                  <label>Amrita ID</label>
+                  <input type="text" class="search-input" />
                 </th>
                 <th>
-                  <input type="text" class="search-input" placeholder="SIG" />
+                  <label>SIG</label>
+                  <input type="text" class="search-input" />
                 </th>
                 <th>
-                  <input type="text" class="search-input" placeholder="Gender" />
+                  <label>Gender</label>
+                  <input type="text" class="search-input" />
                 </th>
                 <th>
-                  <input type="text" class="search-input" placeholder="Date" />
+                  <label>Date</label>
+                  <input type="text" class="search-input" />
                 </th>
                 <th>
-                  <input type="text" class="search-input" placeholder="In-time" />
+                  <label>In-Time</label>
+                  <input type="text" class="search-input" />
                 </th>
                 <th>
-                  <input type="text" class="search-input" placeholder="Out-time" />
+                  <label>Out-Time</label>
+                  <input type="text" class="search-input" />
                 </th>
               </tr>
             </thead>
