@@ -107,21 +107,21 @@ if (isset($_POST["submit"])) {
           <div class="col-6">
             <label class="form-label d-flex"><span class="material-symbols-outlined">person</span> Full
               Name</label>
-            <input required type="text" class="form-control" id="Inputname" name="fullName" />
+            <input required type="text" class="form-control" id="Inputname" name="fullName" required/>
           </div>
           <div class="col-6">
             <label class="form-label d-flex"><span class="material-symbols-outlined"> person_search </span>
               Amrita ID</label>
-            <input required type="text" class="form-control" id="Inputid" name="amritaID" />
+            <input required type="text" class="form-control" id="Inputid" name="amritaID" required />
           </div>
           <div class="col-6">
             <label class="form-label d-flex"><span class="material-symbols-outlined"> call </span> Contact Number</label>
-            <input required type="text" class="form-control" id="Inputname" name="contactNumber" />
+            <input required type="text" class="form-control" id="Inputname" name="contactNumber" required />
           </div>
           <div class="col-6">
             <label class="form-label d-flex"><span class="material-symbols-outlined"> mail </span>
               Email</label>
-            <input required type="email" class="form-control" id="Inputemail" name="emailID" />
+            <input required type="email" class="form-control" id="Inputemail" name="emailID" required />
           </div>
           <div class="col-6">
             <label class="form-label d-flex"><span class="material-symbols-outlined"> account_tree </span>
