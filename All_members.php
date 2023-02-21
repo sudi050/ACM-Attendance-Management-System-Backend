@@ -18,13 +18,18 @@ $num = mysqli_num_rows($exe);
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="js/filter.js"></script>
   <title>All Members - ACM Attendance Management System</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
-
+<script type='text/javascript'>
+  $(document).ready(function() {
+    $('.filter').multifilter()
+  })
+</script>
 <body>
   <nav class="navbar navbar-expand-lg bg-dark">
     <div class="container">
@@ -73,22 +78,28 @@ $num = mysqli_num_rows($exe);
             <thead>
               <tr>
                 <th>
-                  <input type="text" class="search-input" placeholder="Full Name" />
+                  <label>Full Name</label>
+                  <input class="filter" type="text" class="search-input" data-col="Full Name"/>
                 </th>
                 <th>
-                  <input type="text" class="search-input" placeholder="Amrita ID" />
+                  <label>Amrita ID</label>
+                  <input class="filter" type="text" class="search-input" data-col="Amrita ID"/>
                 </th>
                 <th>
-                  <input type="text" class="search-input" placeholder="Branch" />
+                  <label>Branch</label>
+                  <input class="filter" type="text" class="search-input" data-col="Branch"/>
                 </th>
                 <th>
-                  <input type="text" class="search-input" placeholder="SIG" />
+                  <label>Sig</label>
+                  <input class="filter" type="text" class="search-input" data-col="Sig"/>
                 </th>
                 <th>
-                  <input type="text" class="search-input" placeholder="Contact Number" />
+                  <label>Contact Number</label>
+                  <input class="filter" type="text" class="search-input" data-col="Contact Number"/>
                 </th>
                 <th>
-                  <input type="text" class="search-input" placeholder="Email ID" />
+                  <label>Email ID</label>
+                  <input class="filter" type="text" class="search-input" data-col="Email ID"/>
                 </th>
               </tr>
             </thead>

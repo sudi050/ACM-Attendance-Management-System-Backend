@@ -41,6 +41,7 @@ if (isset($_POST["submit"])) {
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="js/filter.js"></script>
   <title>Add Attendance - ACM Attendance Management System</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
@@ -49,6 +50,11 @@ if (isset($_POST["submit"])) {
   <script src="js/export.js"></script>
   <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
 </head>
+<script type='text/javascript'>
+  $(document).ready(function() {
+    $('.filter').multifilter()
+  })
+</script>
 
 <body>
   <nav class="navbar navbar-expand-lg bg-dark">
@@ -123,31 +129,35 @@ if (isset($_POST["submit"])) {
               <tr>
                 <th>
                   <label>Full Name</label>
-                  <input type="text" class="search-input" />
+                  <input class="filter" type="text" class="search-input" data-col="Full Name"/>
                 </th>
                 <th>
                   <label>Amrita ID</label>
-                  <input type="text" class="search-input" />
+                  <input class="filter" type="text" class="search-input" data-col="Amrita ID"/>
                 </th>
                 <th>
                   <label>SIG</label>
-                  <input type="text" class="search-input" />
+                  <input class="filter" type="text" class="search-input" data-col="SIG"/>
                 </th>
                 <th>
                   <label>Gender</label>
-                  <input type="text" class="search-input" />
+                  <input class="filter" type="text" class="search-input" data-col="Gender"/>
                 </th>
                 <th>
                   <label>Date</label>
-                  <input type="text" class="search-input" />
+                  <input class="filter" type="text" class="search-input" data-col="Date"/>
+                </th>
+                <th>
+                  <label>Residence</label>
+                  <input class="filter" type="text" class="search-input" data-col="Residence"/>
                 </th>
                 <th>
                   <label>In-Time</label>
-                  <input type="text" class="search-input" />
+                  <input class="filter" type="text" class="search-input" data-col="In-Time"/>
                 </th>
                 <th>
                   <label>Out-Time</label>
-                  <input type="text" class="search-input" />
+                  <input class="filter" type="text" class="search-input" data-col="Out-Time"/>
                 </th>
               </tr>
             </thead>
@@ -169,6 +179,7 @@ if (isset($_POST["submit"])) {
                       <td>" . $memberDetails['sig'] . "</td>
                       <td>" . $memberDetails['gender'] . "</td>
                       <td>" . $allAttendance['date'] . "</td>
+                      <td>" . $memberDetails['residence'] . "</td>
                       <td>" . $allAttendance['timeIN'] . "</td>
                       <td>" . $allAttendance['timeOut'] . "</td>
                     </tr>
