@@ -111,8 +111,8 @@ if (isset($_POST["submit"])) {
         <form method="post">
           <div class="d-flex justify-content-between">
             <div>
-              <input name="amritaID" placeholder="Amrita ID">
-              <button name="submit" class="btn btn-success">Mark Attendance</button>
+              <input id="amritaID" name="amritaID" placeholder="Amrita ID">
+              <button id="addAttendance" name="submit" class="btn btn-success">Mark Attendance</button>
             </div>
             <div>
               <button onclick="htmlTableToExcel('xlsx')" class="btn btn-success">Export</button>
@@ -129,35 +129,35 @@ if (isset($_POST["submit"])) {
               <tr>
                 <th>
                   <label>Full Name</label>
-                  <input class="filter" type="text" class="search-input" data-col="Full Name"/>
+                  <input class="filter" type="text" class="search-input" data-col="Full Name" />
                 </th>
                 <th>
                   <label>Amrita ID</label>
-                  <input class="filter" type="text" class="search-input" data-col="Amrita ID"/>
+                  <input class="filter" type="text" class="search-input" data-col="Amrita ID" />
                 </th>
                 <th>
                   <label>SIG</label>
-                  <input class="filter" type="text" class="search-input" data-col="SIG"/>
+                  <input class="filter" type="text" class="search-input" data-col="SIG" />
                 </th>
                 <th>
                   <label>Gender</label>
-                  <input class="filter" type="text" class="search-input" data-col="Gender"/>
+                  <input class="filter" type="text" class="search-input" data-col="Gender" />
                 </th>
                 <th>
                   <label>Date</label>
-                  <input class="filter" type="text" class="search-input" data-col="Date"/>
+                  <input class="filter" type="text" class="search-input" data-col="Date" />
                 </th>
                 <th>
                   <label>Residence</label>
-                  <input class="filter" type="text" class="search-input" data-col="Residence"/>
+                  <input class="filter" type="text" class="search-input" data-col="Residence" />
                 </th>
                 <th>
                   <label>In-Time</label>
-                  <input class="filter" type="text" class="search-input" data-col="In-Time"/>
+                  <input class="filter" type="text" class="search-input" data-col="In-Time" />
                 </th>
                 <th>
                   <label>Out-Time</label>
-                  <input class="filter" type="text" class="search-input" data-col="Out-Time"/>
+                  <input class="filter" type="text" class="search-input" data-col="Out-Time" />
                 </th>
               </tr>
             </thead>
@@ -199,6 +199,19 @@ if (isset($_POST["submit"])) {
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script>
+    var input = document.getElementById('amritaID');
+    input.focus();
+    input.select();
+  </script>
+  <script>
+    $('#amritaID').keyup(function() {
+      if (this.value.length == 16) {
+        console.log(this.value);
+        $('#addAttendance').click();
+      }
+    });
+  </script>
 </body>
 
 </html>
