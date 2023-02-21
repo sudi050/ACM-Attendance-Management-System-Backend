@@ -88,10 +88,18 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                     </li>
                 </ul>
             </div>
+            <div class="col-lg-12 mt-3">
+                <h4>Typo's</h4>
+                <ul>
+                    <li>
+                        <p>Srilakshmi Shajin</p>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="row text-center text-white fixed-bottom">
             <div class="col-lg-12">
-                <p>© 2023 ACM Amritapuri All Rights Reserved. Made in ❤️ with India.</p>
+                <p>© 2023 ACM Amritapuri All Rights Reserved. Made with ❤️ in India.</p>
             </div>
         </div>
     </div>

@@ -129,7 +129,7 @@ include("connection.php");
     </div>
     <div class="row text-center text-white bottom-0">
       <div class="col-lg-12">
-        <p>© 2023 ACM Amritapuri All Rights Reserved. Made in ❤️ with India.</p>
+        <p>© 2023 ACM Amritapuri All Rights Reserved. Made with ❤️ in India.</p>
       </div>
     </div>
   </div>
