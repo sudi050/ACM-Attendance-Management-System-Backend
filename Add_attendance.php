@@ -176,12 +176,12 @@ if (isset($_POST["submit"])) {
                       <tr>
                       <td>" . $memberDetails['fullName'] . "</td>
                       <td>" . $allAttendance['amritaID'] . "</td>
+                      <td>" . $allAttendance['timeIN'] . "</td>
+                      <td>" . $allAttendance['timeOut'] . "</td>
                       <td>" . $memberDetails['sig'] . "</td>
                       <td>" . $memberDetails['gender'] . "</td>
                       <td>" . $allAttendance['date'] . "</td>
                       <td>" . $memberDetails['residence'] . "</td>
-                      <td>" . $allAttendance['timeIN'] . "</td>
-                      <td>" . $allAttendance['timeOut'] . "</td>
                     </tr>
                       ";
                 }
